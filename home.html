@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script 
+        type="text/javascript"
+        src="https://ui5.sap.com/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_belize"
+        data-sap-ui-libs="sap.m"
+     >
+    </script>
+
+    <script>
+        /*Aqui as variáveis estão globais. Evitar!*/
+        var oInput = new sap.m.Input();
+        oInput.placeAt("root");
+        /*Campo de entrada de dados*/
+
+        var oNota = new sap.m.RatingIndicator();
+        oNota.placeAt("root").setValue(3);
+        /*Estrelas para notas - 5 estrelas*/
+        
+        var oSlider = new sap.m.Slider();
+        oSlider
+            .setValue(60)
+            .placeAt("root", "first");
+        /*Barra com seleção de valor - avaliação*/
+
+
+        /*NO CONSOLE - fazer as chamadas abaixo:
+        oInput.getMetadata().getName()
+        oNota.getMetadata().getName()
+        oSlider.getetadata().getName()
+
+        *** Usar somente no código o que consta na documentação. Ex. "_sClassName". Pois são encarados como "privados", 
+        já que a SAP pode renomear essas variáveis e impactar nos desenvolvimentos.
+
+
+        GitHub SAP: https://github.com/SAP/openui5
+        
+        */
+    </script>
+
+</head>
+<body>
+  <div id="root" class= "sapUiBody">
+    
+  </div>
+</body>
+</html>
